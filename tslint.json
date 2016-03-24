@@ -85,7 +85,7 @@
       }
     ],
     "chai-vague-errors": true,
-    "export-name": true,
+    "export-name": false,
     "use-isnan": true,
     "jquery-deferred-must-complete": true,
     "missing-jsdoc": true,
