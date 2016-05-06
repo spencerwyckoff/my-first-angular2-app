@@ -7,16 +7,16 @@ import {Observable} from 'rxjs/Observable';
 import {CounterStore} from './counter.store';
 
 @Component({
-  selector: 'sg-decrement-button',
+  selector: 'sg-increment-button',
   template: `
-    <h2>{{counter | async}}</h2>
+    <h3>{{counter | async}}</h3>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-            (click)="decrement()">
-      Decrement
+            (click)="increment()">
+      Increment
     </button>
   `,
 })
-export class DecrementButton {
+export class IncrementButton {
   public counter: Observable<number>;
   private _counter: CounterStore;
 
@@ -25,7 +25,7 @@ export class DecrementButton {
     this.counter = this._counter.counter;
   }
 
-  public decrement(): void {
-    this._counter.decrementCounter();
+  public increment(): void {
+    this._counter.incrementCounter();
   }
 }
