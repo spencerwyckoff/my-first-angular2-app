@@ -2,7 +2,7 @@
 /**
  * @class AppComponent
  */
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {CounterStore} from './counter.store';
 import {IncrementButton} from './increment.button';
 import {DecrementButton} from './decrement.button';
