@@ -10,8 +10,13 @@
     "noImplicitAny": false
   },
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
-  ]
+    "node_modules"
+  ],
+  "filesGlob": [
+    "!./node_modules/**/*.ts",
+    "./src/**/*.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": { "rewriteTsconfig": false }
 }
