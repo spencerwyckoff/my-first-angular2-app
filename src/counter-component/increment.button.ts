@@ -26,6 +26,6 @@ export class IncrementButton {
   }
 
   public increment(): void {
-    this._counter.incrementCounter();
+    this._counter.incrementCounter(1);
   }
 }

@@ -14,11 +14,11 @@ export class CounterStore {
     this.counter = this._counter.asObservable();
   }
 
-  public incrementCounter(): void {
-    this._counter.next(this._counter.getValue() + 1);
+  public incrementCounter(value: number): void {
+    this._counter.next(this._counter.getValue() + value);
   }
 
-  public decrementCounter(): void {
-    this._counter.next(this._counter.getValue() - 1);
+  public decrementCounter(value: number): void {
+    this._counter.next(this._counter.getValue() - value);
   }
 }

@@ -1,22 +1,24 @@
 /* tslint:disable:no-multiline-string */
 /**
- * @class DecrementButton
+ * @class CounterButton
  */
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {CounterStore} from './counter.store';
 
 @Component({
-  selector: 'sg-decrement-button',
+  selector: 'sg-counter-button',
   template: `
     <h3>{{counter | async}}</h3>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
-            (click)="decrement()">
-      Decrement
+            (click)="click()">
+      {{name}}
     </button>
   `,
 })
-export class DecrementButton {
+export class CounterButton {
+  @Input() public value: number;
+  @Input() public name: string;
   public counter: Observable<number>;
   private _counter: CounterStore;
 
@@ -25,7 +27,8 @@ export class DecrementButton {
     this.counter = this._counter.counter;
   }
 
-  public decrement(): void {
-    this._counter.decrementCounter(1);
+  public click(): void {
+    this.name === 'increment' ? this._counter.incrementCounter(this.value) :
+                                this._counter.decrementCounter(this.value);
   }
 }

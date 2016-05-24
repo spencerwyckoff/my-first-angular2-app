@@ -4,24 +4,28 @@
  */
 import {Component} from '@angular/core';
 import {CounterStore} from './counter.store';
-import {IncrementButton} from './increment.button';
-import {DecrementButton} from './decrement.button';
+import {CounterButton} from './counter.button';
 
 @Component({
-  directives: [IncrementButton, DecrementButton],
+  directives: [CounterButton],
   providers: [CounterStore],
   selector: 'sg-counter-component',
   template: `
     <h2>Counter Component</h2>
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
-        <sg-decrement-button></sg-decrement-button>
+        <sg-counter-button [name]="decrement" [value]="decrementValue"></sg-counter-button>
       </div>
       <div class="mdl-cell mdl-cell--6-col">
-        <sg-increment-button></sg-increment-button>
+        <sg-counter-button [name]="increment" [value]="incrementValue"></sg-counter-button>
       </div>
+          
     </div>
   `,
 })
 export class CounterComponent {
+  public decrement: string = 'decrement';
+  public increment: string = 'increment';
+  public decrementValue: number = 1;
+  public incrementValue: number = 2;
 }
