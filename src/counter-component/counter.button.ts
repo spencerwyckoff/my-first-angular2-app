@@ -7,7 +7,7 @@ import {Observable} from 'rxjs/Observable';
 import {CounterStore} from './counter.store';
 
 @Component({
-  selector: 'sg-counter-button',
+  selector: 'cocc-counter-button',
   template: `
     <h3>{{counter | async}}</h3>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"

@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
 import {ITroopCard} from '../troop-card.interface';
 
 @Component({
-  selector: 'sg-troop-card',
+  selector: 'cocc-troop-card',
   template: `<div class="demo-card-square mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand">
     <h2 class="mdl-card__title-text">{{troop.troop}}</h2>

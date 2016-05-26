@@ -10,12 +10,12 @@ import {ITroopCard} from './troop-card.interface';
 
 @Component({
   directives: [TroopCard],
-  selector: 'sg-coc-app',
+  selector: 'cocc-app',
   template: `<h1>Clash of Clans Calculator</h1>
               <h4>Troops</h4>
               <ul>
                 <li *ngFor="let troop of troops">
-                  <sg-troop-card [troop]="troop"></sg-troop-card>
+                  <cocc-troop-card [troop]="troop"></cocc-troop-card>
                 </li>
               </ul>`,
   viewProviders: [HTTP_PROVIDERS],

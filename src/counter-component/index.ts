@@ -9,17 +9,17 @@ import {CounterButton} from './counter.button';
 @Component({
   directives: [CounterButton],
   providers: [CounterStore],
-  selector: 'sg-counter-component',
+  selector: 'cocc-counter-component',
   template: `
     <h2>Counter Component</h2>
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
-        <sg-counter-button [name]="decrement" [value]="decrementValue"></sg-counter-button>
+        <cocc-counter-button [name]="decrement" [value]="decrementValue"></cocc-counter-button>
       </div>
       <div class="mdl-cell mdl-cell--6-col">
-        <sg-counter-button [name]="increment" [value]="incrementValue"></sg-counter-button>
+        <cocc-counter-button [name]="increment" [value]="incrementValue"></cocc-counter-button>
       </div>
-          
+
     </div>
   `,
 })
